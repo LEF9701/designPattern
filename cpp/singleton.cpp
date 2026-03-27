@@ -20,16 +20,11 @@ class Logger{
 int main(){
     Logger::getInstance().log("App started");
     Logger::getInstance().log("Another message");
+    
+    Logger& l1 = Logger::getInstance();
+    l1.log("This is l1");
+    Logger& l2 = Logger::getInstance();
+    l2.log("This is l2");
 
     return 0;
 }
-
-/*
-OUTPUT:
-
-Logger created
-[LOG]App started
-[LOG]Another message
-
-
-*/
