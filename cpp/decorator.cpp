@@ -2,6 +2,20 @@
 #include <memory>
 #include <string>
 
+// Pros of Decorator:
+// 1. Adds new behavior without changing existing classes.
+// 2. Features can be combined flexibly at runtime.
+// 3. Avoids creating many subclasses for every possible combination.
+// 4. Follows the open/closed principle well.
+// 5. Keeps the same interface for both basic objects and decorated objects.
+
+// Cons of Decorator:
+// 1. Introduces more small classes into the design.
+// 2. Nested wrapping can make object creation harder to read.
+// 3. Debugging can be harder because behavior is spread across layers.
+// 4. The order of decorators may affect the final result.
+// 5. Can feel over-engineered for very small programs.
+
 struct Coffee{
     virtual int cost() const = 0;
     virtual std::string desc() const = 0;
